@@ -1,6 +1,8 @@
 import tensorflow as tf # version=1.8.0
 import math
 from tensorflow.python.framework import ops
+from tensorflow.python.ops import array_ops
+from tensorflow.contrib.rnn import LSTMCell, DropoutWrapper
 import numpy as np
 
 # Disables AVX/FMA

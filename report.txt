@@ -1,0 +1,320 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 2 files
+Detected 10 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: Harmony-Transformer-v2\chord_recognition_models.py
+--------------------------------------------------------------------------------
+Harmony-Transformer-v2\chord_recognition_models.py:77:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:78:16: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:137:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:138:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:361:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:399:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:446:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+Harmony-Transformer-v2\chord_recognition_models.py:497:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+--------------------------------------------------------------------------------
+File: Harmony-Transformer-v2\chord_symbol_recognition.py
+--------------------------------------------------------------------------------
+Harmony-Transformer-v2\chord_symbol_recognition.py:304:20: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+Harmony-Transformer-v2\chord_symbol_recognition.py:481:20: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'Harmony-Transformer-v2'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'Harmony-Transformer-v2\\chord_recognition_models.py'
+ outputting to 'Harmony-Transformer-v2-tfv2\\chord_recognition_models.py'
+--------------------------------------------------------------------------------
+
+34:13: INFO: Added keywords to args of function 'tf.pad'
+34:41: INFO: Renamed 'tf.mod' to 'tf.math.floormod'
+53:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+74:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+77:15: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+77:15: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+77:70: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+77:70: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+78:16: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+78:16: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+78:67: INFO: tf.ones_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+78:67: INFO: Renamed 'tf.ones_initializer' to 'tf.compat.v1.ones_initializer'
+79:15: INFO: Added keywords to args of function 'tf.reduce_mean'
+80:19: INFO: Added keywords to args of function 'tf.reduce_mean'
+80:34: INFO: Renamed 'tf.squared_difference' to 'tf.math.squared_difference'
+81:39: INFO: Renamed 'tf.rsqrt' to 'tf.math.rsqrt'
+103:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+114:12: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+115:12: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+116:12: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+117:12: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+118:12: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+119:12: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+137:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+137:18: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+137:89: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+137:89: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+138:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+138:18: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+138:89: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+138:89: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+148:21: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+149:21: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+153:17: INFO: Added keywords to args of function 'tf.transpose'
+155:17: INFO: Added keywords to args of function 'tf.transpose'
+173:70: INFO: Added keywords to args of function 'tf.shape'
+175:22: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+182:53: INFO: Added keywords to args of function 'tf.shape'
+184:22: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+189:53: INFO: Added keywords to args of function 'tf.shape'
+191:22: INFO: Renamed 'tf.where' to 'tf.compat.v1.where'
+205:18: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+206:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+234:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+235:18: INFO: Renamed 'tf.layers.conv1d' to 'tf.compat.v1.layers.conv1d'
+236:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+237:18: INFO: Renamed 'tf.layers.conv1d' to 'tf.compat.v1.layers.conv1d'
+238:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+246:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+247:18: INFO: Renamed 'tf.layers.conv1d' to 'tf.compat.v1.layers.conv1d'
+248:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+249:18: INFO: Renamed 'tf.layers.conv1d' to 'tf.compat.v1.layers.conv1d'
+250:18: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+262:8: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+283:17: INFO: Added keywords to args of function 'tf.reduce_max'
+284:16: INFO: Added keywords to args of function 'tf.reduce_max'
+287:45: INFO: Added keywords to args of function 'tf.pad'
+287:52: INFO: Renamed 'tf.segment_mean' to 'tf.math.segment_mean'
+289:45: INFO: Added keywords to args of function 'tf.pad'
+289:52: INFO: Renamed 'tf.segment_sum' to 'tf.math.segment_sum'
+304:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+305:22: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+307:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+307:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+308:54: INFO: Added keywords to args of function 'tf.shape'
+308:80: INFO: Added keywords to args of function 'tf.shape'
+309:22: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+311:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+314:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+328:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+331:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+347:18: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+353:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+354:26: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+356:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+356:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+357:58: INFO: Added keywords to args of function 'tf.shape'
+357:88: INFO: Added keywords to args of function 'tf.shape'
+358:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+360:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+361:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+361:36: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+361:145: INFO: tf.initializers.zeros requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+361:145: INFO: Renamed 'tf.initializers.zeros' to 'tf.compat.v1.initializers.zeros'
+364:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+380:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+380:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+381:41: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+385:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+386:26: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+388:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+394:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+394:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+395:58: INFO: Added keywords to args of function 'tf.shape'
+395:88: INFO: Added keywords to args of function 'tf.shape'
+396:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+398:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+399:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+399:36: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+399:145: INFO: tf.initializers.zeros requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+399:145: INFO: Renamed 'tf.initializers.zeros' to 'tf.compat.v1.initializers.zeros'
+402:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+430:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+431:26: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+432:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+441:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+441:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+442:58: INFO: Added keywords to args of function 'tf.shape'
+442:88: INFO: Added keywords to args of function 'tf.shape'
+443:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+445:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+446:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+446:36: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+446:143: INFO: tf.initializers.zeros requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+446:143: INFO: Renamed 'tf.initializers.zeros' to 'tf.compat.v1.initializers.zeros'
+449:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+468:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+468:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+469:41: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+473:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+474:26: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+475:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+484:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+490:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+490:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+492:40: INFO: Added keywords to args of function 'tf.shape'
+494:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+496:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+497:36: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+497:36: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+497:143: INFO: tf.initializers.zeros requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+497:143: INFO: Renamed 'tf.initializers.zeros' to 'tf.compat.v1.initializers.zeros'
+502:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+556:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'Harmony-Transformer-v2\\chord_symbol_recognition.py'
+ outputting to 'Harmony-Transformer-v2-tfv2\\chord_symbol_recognition.py'
+--------------------------------------------------------------------------------
+
+86:9: INFO: Renamed 'tf.count_nonzero' to 'tf.math.count_nonzero'
+88:9: INFO: Renamed 'tf.count_nonzero' to 'tf.math.count_nonzero'
+89:9: INFO: Renamed 'tf.count_nonzero' to 'tf.math.count_nonzero'
+96:16: INFO: Added keywords to args of function 'tf.cond'
+96:24: INFO: Renamed 'tf.is_nan' to 'tf.math.is_nan'
+97:13: INFO: Added keywords to args of function 'tf.cond'
+97:21: INFO: Renamed 'tf.is_nan' to 'tf.math.is_nan'
+98:9: INFO: Added keywords to args of function 'tf.cond'
+98:17: INFO: Renamed 'tf.is_nan' to 'tf.math.is_nan'
+114:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+114:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+115:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+116:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+117:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+118:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+119:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+120:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+121:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+122:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+124:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+124:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+131:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+132:26: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+133:23: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+135:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+135:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+137:24: INFO: tf.losses.sigmoid_cross_entropy requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+137:24: INFO: Renamed 'tf.losses.sigmoid_cross_entropy' to 'tf.compat.v1.losses.sigmoid_cross_entropy'
+140:18: INFO: tf.losses.softmax_cross_entropy requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+140:18: INFO: Renamed 'tf.losses.softmax_cross_entropy' to 'tf.compat.v1.losses.softmax_cross_entropy'
+144:12: INFO: Added keywords to args of function 'tf.reduce_sum'
+147:18: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+148:19: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+149:16: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+152:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+152:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+153:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+153:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+154:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+154:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+156:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+156:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+162:23: INFO: Added keywords to args of function 'tf.boolean_mask'
+163:20: INFO: Added keywords to args of function 'tf.boolean_mask'
+167:18: INFO: Added keywords to args of function 'tf.argmax'
+170:18: INFO: Added keywords to args of function 'tf.reduce_sum'
+171:24: INFO: Added keywords to args of function 'tf.size'
+174:19: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+177:19: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+180:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+180:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+181:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+181:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+182:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+182:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+183:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+183:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+185:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+185:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+190:20: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+198:13: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+198:13: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+199:19: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+199:19: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+200:18: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+200:18: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+201:27: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+202:26: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+203:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+207:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+208:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+304:20: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+332:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+332:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+333:14: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+334:16: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+335:15: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+336:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+337:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+338:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+340:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+340:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+345:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+346:22: INFO: Renamed 'tf.layers.dropout' to 'tf.compat.v1.layers.dropout'
+347:23: INFO: Renamed 'tf.layers.dense' to 'tf.compat.v1.layers.dense'
+349:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+349:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+350:15: INFO: tf.losses.softmax_cross_entropy requires manual check. tf.losses have been replaced with object oriented versions in TF 2.0 and after. The loss function calls have been converted to compat.v1 for backward compatibility. Please update these calls to the TF 2.0 versions.
+350:15: INFO: Renamed 'tf.losses.softmax_cross_entropy' to 'tf.compat.v1.losses.softmax_cross_entropy'
+351:12: INFO: Added keywords to args of function 'tf.reduce_sum'
+354:18: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+355:19: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+356:16: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+359:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+359:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+361:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+361:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+364:18: INFO: Added keywords to args of function 'tf.argmax'
+367:18: INFO: Added keywords to args of function 'tf.reduce_sum'
+368:24: INFO: Added keywords to args of function 'tf.size'
+371:19: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+373:20: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+376:4: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+376:4: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+378:9: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+378:9: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+384:20: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+392:13: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+392:13: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+393:19: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+393:19: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+394:18: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+394:18: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+395:27: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+396:26: INFO: Renamed 'tf.get_default_graph' to 'tf.compat.v1.get_default_graph'
+397:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+401:9: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+402:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+481:20: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+

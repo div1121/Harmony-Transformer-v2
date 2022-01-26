@@ -522,7 +522,7 @@ if __name__ == '__main__':
                                   'n_in_succession',
                                   'annealing_rate'])
     
-    hp = hyperparameters(dataset='BPS_FH', # {'BPS_FH', 'Preludes'}
+    hp = hyperparameters(dataset='Preludes', # {'BPS_FH', 'Preludes'}
                          test_set_id=1, # {1, 2, 3, 4}
                          graph_location='model',
                          n_root_classes=len(root_dict.keys()),
